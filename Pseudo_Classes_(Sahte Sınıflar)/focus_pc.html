@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Pseudo Class</title>
+    <style>
+        /* :focus  ->  Belirtilen HTML elementine odaklanıldığında stil tanımlar. Mesela input'a tıkladığımızda arka plan rengi aqua olur. */
+        /* 
+        input:focus{
+            background-color: aqua;
+        }
+
+        div:focus{
+            background-color: aqua;
+        } 
+        */
+
+        /* Her şey için focus özelliğini uygular */
+        :focus{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div tabindex="3">HTML</div>
+
+    <input type="text" tabindex="1">
+
+    <div tabindex="7">CSS</div>
+
+    <input type="text" tabindex="2">
+    
+    <div tabindex="4">JS</div>
+    
+    <input type="text" tabindex="6">
+    
+    <div tabindex="8">PHP</div>
+    
+    <div tabindex="5">SEO</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-child Pseudo Class</title>
+    <style>
+        /* :first-child  ->  Belirtilen HTML elementi baz alınarak, üst elementine göre bitişik ilk child (çocuk) durumundaki elemente stil tanımlar. */
+        p:first-child{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h3>Deneme</h3> p ilk element olmasaydı HTML boyamazdı. -->
+    <p>HTML</p>  <!-- Stil tanımlanacak -->
+    <p>CSS</p>
+    <p>JS</p>
+    <p>PHP</p>
+
+    <div>
+        <p>JAVA  <!-- Stil tanımlanacak -->
+            <div>
+                <p>PYTHON</p>  <!-- Stil tanımlanacak -->
+            </div>
+        </p>
+        <p>C</p>
+        <p>C++</p>
+    </div>
+</body>
+</html>

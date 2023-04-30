@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visited Pseudo Class</title>
+
+    <style>
+        /* :any-link  ->  Doküman içerisinde bulunan HTML'in link elementinin / elementlerinin URL değeri boş değil ise stil tanımlar. (href="" bu şekilde olsa dahi url tanımlayacağız anlamında olduğu için çalışır. href="#" bu da boş değil anlamına geliyor. href olmazsa any-link çalışmaz) */
+
+        /* Tüm tarayıcılarda çalışsın diye bu kodları yazıyoruz. */
+        a:-webkit-any-link{ /* Chrome */
+            color: red;
+            text-decoration: none;
+        }
+        a:-moz-any-link{ /* Mozilla Firefox */
+            color: red;
+            text-decoration: none;
+        }
+        a:-o-any-link{ /* opera */
+            color: red;
+            text-decoration: none;
+        }
+        a:-ms-any-link{ /* Microsoft */
+            color: red;
+            text-decoration: none;
+        }
+        a:any-link{
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="https://www.selimtekin.com">Selim Tekin</a><br />
+    <a href="https://www.yandex.com">Yandex</a><br />
+    <a href="https://www.facebook.com">Facebook</a>
+</body>
+</html>

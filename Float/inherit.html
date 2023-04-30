@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float (left)</title>
+    <style>
+        /* float    ->  HTML elementinin bulunduğu konumdan kayma özelliklerini belirler: .
+           Değerler -> none | left | right | initial | inherit
+           none     -> Değer yok
+           left     -> Sola kay
+           right    -> Sağa kay
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner
+           inherit  -> HTML elementi üst elementinin biçimlendirme değerine döner
+           */
+        div{
+            float: right;
+        }
+
+        p{
+            width: 100px;
+            border: 1px solid blue;
+            margin: 2px;
+            float: inherit; /* float: right */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Deneme 1</p>
+        <p>Deneme 2</p>
+        <p>Deneme 3</p>
+        <p>Deneme 4</p>
+        <p>Deneme 5</p>
+    </div>
+</body>
+</html>

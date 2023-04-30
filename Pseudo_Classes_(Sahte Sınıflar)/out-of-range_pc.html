@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>out-of-range Pseudo Class</title>
+    <style>
+        /* :out-of-range  ->  Belirtilen HTML elementi bilgi girişi, belirtilen aralıklar dışında bir değer olduğunda stil tanımlar. */
+
+        input[type="number"]:out-of-range{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+Adınız Soyadınız : <input type="text"><br />
+Yaşınız          : <input type="number" min="1" max="100">
+</body>
+</html>

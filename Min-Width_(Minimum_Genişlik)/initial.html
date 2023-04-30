@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min-Width (initial)</title>
+    <style>
+      /* min-width    ->  HTML elementinin genişliğini belirler. Parent'ı küçüldükçe max-width verdiğimiz element de küçülür.
+           Değerler -> length | % | initial | inherit
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      /* min-width ile içinde bulunduğumuz elementin dışına taşabiliriz. */
+      div {
+        background-color: blue;
+        min-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="min-width: initial;">Selim Tekin</div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Pseudo Class</title>
+
+    <style>
+        /* :active  ->  Belirtilen HTML elementi aktif olduğunda stil tanımlar. Yani tıklandığında. (Üzerine basılı tut daha iyi gör) */
+
+        a[href*="selimtekin"]:active{
+            color: red;
+            text-decoration: none;
+        }
+        
+        p:active{
+            color: orange;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="https://www.selimtekin.com">Selim Tekin</a><br />
+    <a href="https://www.yandex.com">Yandex</a><br />
+    <a href="https://www.facebook.com">Facebook</a>
+    <p>Deneme</p>
+</body>
+</html>

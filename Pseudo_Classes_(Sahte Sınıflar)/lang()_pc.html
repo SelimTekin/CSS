@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lang() Pseudo Class</title>
+    <style>
+        /* :lang()  ->  Belirtilen HTML elementinin lang (dil) özelliğine göre stil tanımlanır. Element belirtmezsen lang olan hepsine uygular. */
+
+        div[class="menu"]:lang(it){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu" lang="tr">Merhaba</div>
+    <div class="menu" lang="it">Ciao</div>
+    <div class="menu" lang="en">Hello</div>
+    <br /><br />
+    <div class="icerik" lang="tr">Merhaba</div>
+    <div class="icerik" lang="it">Ciao</div>
+    <div class="icerik" lang="en">Hello</div>
+</body>
+</html>

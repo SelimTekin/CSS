@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width (auto)</title>
+    <style>
+      /* width    ->  HTML elementinin genişliğini belirler.
+           Değerler -> auto | length | % | initial | inherit
+           auto     -> üst (parent) elementine göre genişlik değeri alır.
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      /* İçteki elementin genişliği dıştakinden büyük olursa taşar. Bu bazen doğru bazen yanlıştır. */
+      div {
+        background-color: yellow;
+        width: 1000px;
+      }
+      p {
+        background-color: red;
+        width: 500px; /* p elementi div elementinin içinde olduğu için onun genişliğini alır. Yani div elementi küçüldükçe p elementide küçülür. */
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Selim Tekin</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Pseudo Class</title>
+    <style>
+        /* :target:  ->  Belirtilen HTML elementine çapa türünde link'ler ile bağlanmış olan ve tıklandığında hedeflenmiş olan elemente stil tanımlaması yapar. */
+
+        /* Hangisine tıklanırsa diğerini pasif yapar. */
+        :target{
+            color: blue;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>Selim Tekin</h3>
+    <div><a href="#seliminDersleri">Selim Tekin</a></div>
+    <div><a href="#enesinDersleri">Enes Dönmez</a></div>
+
+    <ul id="seliminDersleri">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>XML</li>
+        <li>PHP</li>
+    </ul>
+
+    <br /><br /><br />
+
+    <ul id="enesinDersleri">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>XML</li>
+        <li>PHP</li>
+    </ul>
+</body>
+</html>

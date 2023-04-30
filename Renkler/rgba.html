@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rgb</title>
+    <style>
+
+        /* rgba'da alpha kanalı (son parametre) rengi saydamlaştırır. Saydamllaştıkça arka planın rengi de görünür. */
+         /* Verdiğimiz oranın geri kalan kısmı şeffaflık oluyor. Yani son parametreye 0.1 yazarsak şeffaflık 0.9 oranında olur. 1.0 yazarsak gerçek rengi olur. Yani bi değişiklik olmaz. */
+        /*body{
+            background-color: rgba(255, 0, 0, 0.1);
+        }*/
+
+        div[name="bir"]{
+            background-color: rgba(0, 0, 255, 1.0);
+        }
+        div[name="iki"]{
+            background-color: rgba(0, 0, 255, 0.9);
+        }
+        div[name="uc"]{
+            background-color: rgba(0, 0, 255, 0.8);
+        }
+        div[name="dort"]{
+            background-color: rgba(0, 0, 255, 0.7);
+        }
+        div[name="bes"]{
+            background-color: rgba(0, 0, 255, 0.6);
+        }
+        div[name="alti"]{
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+        div[name="yedi"]{
+            background-color: rgba(0, 0, 255, 0.4);
+        }
+        div[name="sekiz"]{
+            background-color: rgba(0, 0, 255, 0.3);
+        }
+        div[name="dokuz"]{
+            background-color: rgba(0, 0, 255, 0.2);
+        }
+        div[name="on"]{
+            background-color: rgba(0, 0, 255, 0.1);
+        }
+        div[name="onBir"]{
+            background-color: rgba(0, 0, 255, 0.0);
+        }
+    </style>
+</head>
+<body>
+<div name="bir">Gerçek Renk</div>
+<div name="iki">%10 Saydam / Şeffaf</div>
+<div name="uc">%20 Saydam / Şeffaf</div>
+<div name="dort">%30 Saydam / Şeffaf</div>
+<div name="bes">%40 Saydam / Şeffaf</div>
+<div name="alti">%50 Saydam / Şeffaf</div>
+<div name="yedi">%60 Saydam / Şeffaf</div>
+<div name="sekiz">%70 Saydam / Şeffaf</div>
+<div name="dokuz">%80 Saydam / Şeffaf</div>
+<div name="on">%90 Saydam / Şeffaf</div>
+<div name="onBir">%100 Saydam / Şeffaf</div>
+</body>
+</html>

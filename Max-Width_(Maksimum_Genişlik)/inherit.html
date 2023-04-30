@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max-Width (inherit)</title>
+    <style>
+      /* max-width    ->  HTML elementinin maksimum genişliğini belirler. Parent'ı küçüldükçe max-width verdiğimiz element de küçülür.
+           Değerler -> auto | length | % | initial | inherit
+           none     -> Değer yok.
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      div[name="bir"] {
+        background-color: black;
+        max-width: 80%;
+      }
+      div[name="iki"] {
+        background-color: red;
+        max-width: inherit;        /* max-width: 80%  -> Çünkü üst (parent) elementinin max-width'i 80% */
+      }
+      div[name="uc"] {
+        background-color: blue;
+        max-width: 50%;        /* max-width: 50%  -> Çünkü üst (parent) elementinin max-width'i 50% */
+      }
+      div[name="dort"] {
+        background-color: yellow;
+        max-width: inherit;        /* max-width: 50%  -> Çünkü üst (parent) elementinin max-width'i 50% */
+      }
+    </style>
+  </head>
+  <body>
+    <div name="bir">
+      <div name="iki">
+        <div name="uc">
+          <div name="dort">Selim Tekin</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

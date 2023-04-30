@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width (auto)</title>
+    <style>
+      /* width    ->  HTML elementinin genişliğini belirler.
+           Değerler -> auto | length | % | initial | inherit
+           auto     -> üst (parent) elementine göre genişlik değeri alır.
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      div#bir {
+        background-color: black;
+        width: 80%;
+      }
+      div#iki {
+        background-color: red;
+        width: inherit;        /* width: 80%  -> Çünkü üst (parent) elementinin genişliği 80% */
+      }
+      div#uc {
+        background-color: blue;
+        width: 50%;        /* width: 50%  -> Çünkü üst (parent) elementinin genişliği 50% */
+      }
+      div#dort {
+        background-color: yellow;
+        width: inherit;        /* width: 50%  -> Çünkü üst (parent) elementinin genişliği 50% */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bir">
+      <div id="iki">
+        <div id="uc">
+          <div id="dort">Selim Tekin</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max-Width (none)</title>
+    <style>
+      /* max-width    ->  HTML elementinin maksimum genişliğini belirler. Parent'ı küçüldükçe max-width verdiğimiz element de küçülür.
+           Değerler -> none | length | % | initial | inherit
+           none     -> Değer yok.
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      div {
+        background-color: yellow;
+        max-width: 1000px;
+      }
+      p {
+        background-color: red;
+        max-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Selim Tekin</p>
+    </div>
+  </body>
+</html>

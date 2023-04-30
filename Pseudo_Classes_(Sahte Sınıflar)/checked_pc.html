@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checked Pseudo Class</title>
+    <style>
+        /* :checked:  ->  Belirtilen HTML elementi seçildiğinde stil tanımlar. Seçim kaldırıldığında sitl normale döner. */
+
+        /* O checkbox kutusuna stil uygular. Seçili olanlara ilk başta zaten uygulamış olur. */
+        input:checked{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+Hobileriniz: <br />
+<input type="checkbox"> Alışveriş <br/>
+<input type="checkbox"> Seyahat <br/>
+<input type="checkbox" checked="checked"> Kod Yazmak <br/>
+<input type="checkbox" checked="checked"> Dans Etmek <br/>
+
+Cinsiyetiniz: <br />
+<input type="radio" name="cinsiyet" checked="checked"> Erkek <br />
+<input type="radio" name="cinsiyet"> Kadın <br />
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min-Width (percent-yuzde(%))</title>
+    <style>
+      /* min-width    ->  HTML elementinin genişliğini belirler. Parent'ı küçüldükçe max-width verdiğimiz element de küçülür.
+           Değerler -> length | % | initial | inherit
+           length   -> Uzunluk değeri
+           %        -> Üst (parent) elementinin genişliğine göre yüzde değeri alır.
+           initial  -> HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit  -> HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+      /* min-width ile içinde bulunduğumuz elementin dışına taşabiliriz. */
+      #bir {
+        background-color: blue;
+        width: 80%;
+      }
+      #iki {
+        background-color: rgba(255, 0, 4, 0.43);
+        min-width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bir">
+      <div id="iki">Selim Tekin</div>
+    </div>
+  </body>
+</html>

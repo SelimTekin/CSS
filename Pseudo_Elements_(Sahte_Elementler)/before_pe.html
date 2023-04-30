@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before Pseudo Element</title>
+    <style>
+        /* ::before  ->  Belirtilen HTML elementinin öncesine içerik atayarak stil tanımlar. */
+
+        button::before{
+            content: "\2600 \2601 \2602 \2603"; /* Güneşli Kapalı Yağmurlu Karlı */
+            color: red;  /* content için stil tanımlar. */
+        }
+    </style>
+</head>
+<body>
+    <button>Hava Durumu</button>
+</body>
+</html>

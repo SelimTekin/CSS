@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-line Pseudo Element</title>
+    <style>
+        /* ::first-line  ->  Belirtilen HTML elementinin ilk satırına stil tanımlar. */
+
+        p#bir::first-line{
+            color: red;
+        }
+
+        div[name="deneme"]::first-line{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p id="bir">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maxime repudiandae quo dolorum itaque earum libero molestias quis sed architecto debitis quas vero aliquam repellat, porro tempora eligendi! Amet nobis, sunt numquam temporibus unde ipsa maiores ex eveniet beatae alias odio atque ipsam at ipsum recusandae! Laboriosam autem saepe enim?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maxime repudiandae quo dolorum itaque earum libero molestias quis sed architecto debitis quas vero aliquam repellat, porro tempora eligendi! Amet nobis, sunt numquam temporibus unde ipsa maiores ex eveniet beatae alias odio atque ipsam at ipsum recusandae! Laboriosam autem saepe enim?</p>
+    <div name="deneme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maxime repudiandae quo dolorum itaque earum libero molestias quis sed architecto debitis quas vero aliquam repellat, porro tempora eligendi! Amet nobis, sunt numquam temporibus unde ipsa maiores ex eveniet beatae alias odio atque ipsam at ipsum recusandae! Laboriosam autem saepe enim?</div>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maxime repudiandae quo dolorum itaque earum libero molestias quis sed architecto debitis quas vero aliquam repellat, porro tempora eligendi! Amet nobis, sunt numquam temporibus unde ipsa maiores ex eveniet beatae alias odio atque ipsam at ipsum recusandae! Laboriosam autem saepe enim?</div>
+</body>
+</html>

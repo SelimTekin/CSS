@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empty Pseudo Class</title>
+    <style>
+        /* :empty:  ->  Belirtilen HTML elementinin içeriği tamamen boş ise stil tanımlamması yapar. */
+        :empty{
+            width: 100%; /* Boş olduğu için algılanmaz. Algılanması için boyutlandırdık. width olmasa da olur. */
+            height: 1px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div>Selim</div>
+<div></div>
+<div>Tekin</div>
+</body>
+</html>
