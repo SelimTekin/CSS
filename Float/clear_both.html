@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear (both)</title>
+    <style>
+        /* clear     ->  HTML elementine atanmış olan float özelliğinin temizlenme durumunu belirler: .
+           Değerler  ->  none | left | right | both | initial
+           none      -> Değer yok
+           left      -> Sol
+           right     -> Sağ
+           both      -> Her ikisi de
+           initial   -> HTML elementi varsayılan biçimlendirme değerine döner */
+
+           div{
+            width: 100px;
+            border: 1px solid blue;
+            margin: 2px;
+            float: right;
+           }
+
+           /* Sağa veya sola kaydırılan bir element için clear:both kullanılabilir. */
+           #uc{
+            clear: both;    /*  2. div'den sonrasını temizler Yani bir nevi 2. yine block oluyor ve 3. alttan devam ediyor.*/
+           }
+    </style>
+</head>
+<body>
+    <div>Deneme 1</div>
+    <div>Deneme 2</div>
+    <div id="uc">Deneme 3</div>
+    <div id="dort">Deneme 4</div>
+    <div id="bes">Deneme 5</div>
+</body>
+</html>
