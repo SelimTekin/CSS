@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Table</title>
+    <style>
+        table, td{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Satış Listesi</caption>
+        <colgroup span="5" style="background-color: yellow;">
+            <col span="1" width="100">
+            <col span="1" width="150">
+            <col span="1" width="200">
+            <col span="1" width="250">
+            <col span="1" width="300">
+        </colgroup>
+        <thead>
+            <tr>
+                <td>İsim</td>
+                <td>Soyisim</td>
+                <td>Cinsiyet</td>
+                <td>Yaşadığı Şehir</td>
+                <td>Harcadığı Tutar</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selim</td>
+                <td>Tekin</td>
+                <td>Erkek</td>
+                <td>İstanbul</td>
+                <td>30.50 TL</td>
+            </tr>
+            <tr>
+                <td>Deneme 1</td>
+                <td>Deneme 1</td>
+                <td>Erkek</td>
+                <td>İzmir</td>
+                <td>100.00 TL</td>
+            </tr>
+            <tr>
+                <td>Deneme 2</td>
+                <td>Deneme 2</td>
+                <td>Kadın</td>
+                <td>Ankara</td>
+                <td>63.25 TL</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>193.75 TL</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
