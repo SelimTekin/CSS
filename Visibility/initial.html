@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility (initial)</title>
+    <style>
+        /* visibility  ->  HTML elementinin görüntülenme ve gizlenme özelliklerini belirler: .
+           Değerler    ->  visible | hidden | collapse | initial | inherit
+           visible     :   Görünür. (Element gösterilir.)
+           hidden      :   Gizli.   (Element gösterilmez ve elementin kapladığı alan değerleri korunarak boş bir alan oluşur.)
+           collapse    :   Bitişik. (Element gösterilmez ve elementin kapladığı alan değerleri korunarak boş bir alan oluşur. Fakat element bir table (tablo) elementi ise kapladığı alan değerleri korunmaz.)
+           initial     :   HTML elementi varsayılan biçimlendirme deperine döner.
+           inherit     :   HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+        */
+
+        div{
+            width: 500px;
+            height: 200px;
+            border: 2px solid red;
+            margin: 10px;
+            visibility: hidden;
+        }
+        #ornek{
+            visibility: initial;
+        }
+    </style>
+</head>
+<body>
+    <div>Selim Tekin</div>
+    <div id="ornek">Selim Tekin</div>
+    <div>Selim Tekin</div>
+</body>
+</html>
