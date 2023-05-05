@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position (inherit)</title>
+    <style>
+        /* position  ->  HTML elementinin konumlandırma özelliklerini belirler.
+           Değerler  -> static | relative | absolute | fixed | sticky | initial | inherit
+           static    : Durağan
+           relative  : Göreceli
+           absolute  : Mutlak / Kesin
+           fixed     : Sabit
+           sticky    : Yapışkan
+           initial   : HTML elementi varsayılan biçimlendirme değerine döner.
+           inherit   : HTML elementi üst (parent) elementinin biçimlendirme değerini alır.
+           
+           top       : Konumlandırılmış bir HTML elementinin, üstten hizalama konumunu belirler.
+           right     : Konumlandırılmış bir HTML elementinin, üstten hizalama konumunu belirler.
+           bottom    : Konumlandırılmış bir HTML elementinin, üstten hizalama konumunu belirler.
+           left      : Konumlandırılmış bir HTML elementinin, üstten hizalama konumunu belirler.
+           Değerler  -> auto | length | initial
+           auto      : Otomatik değer alır.
+           length    : Uzunluk değeri.
+           initial   : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        span i{
+            display: none;
+        }
+        span:hover{
+            position: relative;
+        }
+        span:hover i{
+            position: absolute;
+            display: block;
+            top: -60px;
+            left: 50px;
+        }
+        img{
+            border: 4px double black;
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx <span>Selim Tekin<i><img src="intro-bg.avif" alt="ice" width="50" height="50"></i></span> xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx xxxxx
+    </div>
+</body>
+</html>
