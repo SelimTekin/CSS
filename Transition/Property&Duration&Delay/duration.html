@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-duration</title>
+    <style>
+        /* transition-duration  ->  HTML elementine tanımlanmış olan geçiş özelliğinin kaç saniye veya kaç milisaniye sonunda tanımlanacağını belirler.
+           Değerler             ->  time | initial
+           time                 -> Zaman. (Saniye : s, Milisaniye : ms)
+           initial              -> HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 4px double black;
+            font-size: 25px;
+            line-height: 200px;
+            color: grey;
+            text-align: center;
+            margin: 100px;
+            -webkit-transition-property: width, transform;
+            -moz-transition-property: width, transform;
+            -o-transition-property: width, transform;
+            -ms-transition-property: width, transform;
+            transition-property: width, transform;
+            -webkit-transition-duration: 100ms, 300ms;
+            -moz-transition-duration: 100ms, 300ms;
+            -o-transition-duration: 100ms, 300ms;
+            -ms-transition-duration: 100ms, 300ms;
+            transition-duration: 100ms, 300ms;    /* 1000 ms ->  1 s */
+        }
+        div:hover{
+            width: 300px;
+            -webkit-transform: skew(10deg);
+            -moz-transform: skew(10deg);
+            -o-transform: skew(10deg);
+            -ms-transform: skew(10deg);
+            transform: skew(10deg);
+        }
+        #islem{
+            -webkit-transition-duration: initial;
+            -moz-transition-duration: initial;
+            -o-transition-duration: initial;
+            -ms-transition-duration: initial;
+            transition-duration: initial;           /* initial   ->  0 saniye (0 s) */
+        }
+    </style>
+</head>
+<body>
+    <div>Selim Tekin</div>
+    <div id="islem"></div>
+</body>
+</html>

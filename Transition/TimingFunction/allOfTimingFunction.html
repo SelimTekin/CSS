@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transition-timing-function</title>
+    <style>
+      /* transition-timing-function  ->  HTML elementine tanımlanmış olan geçiş özelliğinin, hız eğrisi özelliklerini belirler.
+           Değerler ->  ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | steps | cubic-bezier | initial
+           ease         : Yavaş olarak başlayarak hızlanır ve sona doğru yavaşlar.
+           linear       : Başlangıçtan sona kadar aynı hız.
+           ease-in      : Yavaş olarak başalayarak sona doğru hızlanır.
+           ease-out     : Hızlı olarak başalayarak sona doğru yavaşlar.
+           ease-in-out  : Yavaş olarak başlayarak ortada hızlanır ve sona doğru tekrar yavaşlar.
+           step-start   : Geçiş süresüne bakılmaksızın doğrudan sona ulaşır.
+           step-end     : Geçiş süresine bakılarak, geçiş süresi kadar bekleyerek doğrudan sona ulaşır.
+           steps        : Başlangıç ve bitiş arasında adımlamalı geçiş işlemi yapar.
+           cubic-bezier : Bezier eğrisi. (http://cubic-bezier.com)
+           initial      : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+      div.islem {
+        width: 50px;
+        height: 50px;
+        margin: 2px;
+        border: thin solid black;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        background-color: grey;
+        -webkit-transition-property: all;
+        -moz-transition-property: all;
+        -o-transition-property: all;
+        -ms-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: 2s;
+        -moz-transition-duration: 2s;
+        -o-transition-duration: 2s;
+        -ms-transition-duration: 2s;
+        transition-duration: 2s;
+      }
+
+      #bir {
+        background-color: #ff0004;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        -ms-transition-timing-function: ease;
+        transition-timing-function: ease;
+      }
+      #iki {
+        background-color: #6f23d9;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        -o-transition-timing-function: linear;
+        -ms-transition-timing-function: linear;
+        transition-timing-function: linear;
+      }
+      #uc {
+        background-color: #45e17e;
+        -webkit-transition-timing-function: ease-in;
+        -moz-transition-timing-function: ease-in;
+        -o-transition-timing-function: ease-in;
+        -ms-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+      }
+      #dort {
+        background-color: #a7490a;
+        -webkit-transition-timing-function: ease-out;
+        -moz-transition-timing-function: ease-out;
+        -o-transition-timing-function: ease-out;
+        -ms-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+      }
+      #bes {
+        background-color: #e4f811;
+        -webkit-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+      }
+      #alti {
+        background-color: #00ff0d;
+        -webkit-transition-timing-function: step-start;
+        -moz-transition-timing-function: step-start;
+        -o-transition-timing-function: step-start;
+        -ms-transition-timing-function: step-start;
+        transition-timing-function: step-start;
+      }
+      #yedi {
+        background-color: #686666;
+        -webkit-transition-timing-function: step-end;
+        -moz-transition-timing-function: step-end;
+        -o-transition-timing-function: step-end;
+        -ms-transition-timing-function: step-end;
+        transition-timing-function: step-end;
+      }
+      #sekiz {
+        background-color: #2ba8e4;
+        -webkit-transition-timing-function: steps(5, end);
+        -moz-transition-timing-function: steps(5, end);
+        -o-transition-timing-function: steps(5, end);
+        -ms-transition-timing-function: steps(5, end);
+        transition-timing-function: steps(5, end);
+      }
+      #dokuz {
+        background-color: #188c34;
+        -webkit-transition-timing-function: steps(5, start);
+        -moz-transition-timing-function: steps(5, start);
+        -o-transition-timing-function: steps(5, start);
+        -ms-transition-timing-function: steps(5, start);
+        transition-timing-function: steps(5, start);
+      }
+      #on {
+        background-color: #433b87;
+        -webkit-transition-timing-function: cubic-bezier(0, 1, 1, 0);
+        -moz-transition-timing-function: cubic-bezier(0, 1, 1, 0);
+        -o-transition-timing-function: cubic-bezier(0, 1, 1, 0);
+        -ms-transition-timing-function: cubic-bezier(0, 1, 1, 0);
+        transition-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+
+      #anaEleman:hover div {
+        transform: translateX(1450px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="anaEleman">
+      <div id="bir" class="islem"></div>
+      <div id="iki" class="islem"></div>
+      <div id="uc" class="islem"></div>
+      <div id="dort" class="islem"></div>
+      <div id="bes" class="islem"></div>
+      <div id="alti" class="islem"></div>
+      <div id="yedi" class="islem"></div>
+      <div id="sekiz" class="islem"></div>
+      <div id="dokuz" class="islem"></div>
+      <div id="on" class="islem"></div>
+    </div>
+  </body>
+</html>

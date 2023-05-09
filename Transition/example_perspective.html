@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition (example perspective)</title>
+    <style>
+        /* transition   -> HTML elementinin tüm geçiş özelliklerini belirler.
+           Parametreler -> transition-property | transition-duration | transition-timing-function | transition-delay
+           Değerler     -> property value (özellik değeri) | initial
+           transition-property       : CSS özellik adı.
+           transition-duration       : Geçiş süresi.
+           transition-timing-function: Hız eğrisi.
+           transition-delay          : Duraksama süresi.
+           initial                   : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        body{
+            margin: 50px;
+        }
+        #kisiKartiAlani{
+            position: relative;
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            -webkit-perspective: 600px;
+            -moz-perspective: 600px;
+            -o-perspective: 600px;
+            -ms-perspective: 600px;
+            perspective: 600px; /* Varsayılan 1000px */
+        }
+        #kisiKarti{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -o-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d; /* Yukarıda perspective yapmak için bunu yazdık. */
+            -webkit-transition: all 1s linear;
+            -moz-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            -ms-transition: all 1s linear;
+            transition: all 1s linear;     /* all -> Hangi property olursa olsun transition uygula anlamına geliyor. */
+        }
+        #kisiKarti:hover{
+            -webkit-transform: rotateX(180deg); /* rotateY dersek yana doğru döner. -180 yaparsak tersine döner. (Aşağıda da yapılacak) */
+            -moz-transform: rotateX(180deg);
+            -o-transform: rotateX(180deg);
+            -ms-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
+        .onYuz{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Dışarı taşmasın */
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -o-border-radius: 8px;
+            -ms-border-radius: 8px;
+            border-radius: 8px;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -o-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden; /* Yüzeyin arka tarafını gizle */
+        }
+        .arkaYuz{
+            position: absolute;
+            line-height: 150px; /* div yüksekliği 150px olduğu için  line-height: 150px vererek ortalayabiliriz. */
+            text-align: center;
+            background-color: grey;
+            font-size: 20px;
+            color: white;
+            -webkit-transform: rotateX(180deg);
+            -moz-transform: rotateX(180deg);
+            -o-transform: rotateX(180deg);
+            -ms-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="kisiKartiAlani">
+        <div id="kisiKarti">
+            <div class="onYuz"><img src="../Position/intro-bg.avif" width="150" height="150" alt=""></div>
+            <div class="onYuz arkaYuz">Selim Tekin</div>
+        </div>
+    </div>
+</body>
+</html>

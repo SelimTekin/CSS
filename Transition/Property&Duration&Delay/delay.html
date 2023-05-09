@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-delay</title>
+    <style>
+        /* transition-delay  ->  HTML elementine tanımlanmış olan geçiş özelliğinin kaç saniye veya kaç milisaniye sonra başlayacağını belirler.
+           Değerler             ->  time | initial
+           time                 -> Zaman. (Saniye : s, Milisaniye : ms)
+           initial              -> HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: #990000;
+            border: thin solid red;
+            font-size: 25px;
+            line-height: 150px;
+            color: #FFF;
+            text-align: center;
+            -webkit-transition-property: width, border, background-color, color;
+            -moz-transition-property: width, border, background-color, color;
+            -o-transition-property: width, border, background-color, color;
+            -ms-transition-property: width, border, background-color, color;
+            transition-property: width, border, background-color, color;
+            -webkit-transition-duration: 8s;
+            -moz-transition-duration: 8s;
+            -o-transition-duration: 8s;
+            -ms-transition-duration: 8s;
+            transition-duration: 8s;
+            -webkit-transition-delay: 1s, 2s, 3s, 4s;
+            -moz-transition-delay: 1s, 2s, 3s, 4s;
+            -o-transition-delay: 1s, 2s, 3s, 4s;
+            -ms-transition-delay: 1s, 2s, 3s, 4s;
+            transition-delay: 1s, 2s, 3s, 4s;
+        }
+        div:hover{
+            width: 1500px;
+            border: thin solid red;
+            background-color: #000099;
+            color: yellow;
+        }
+        #islem{
+            -webkit-transition-delay: initial;
+            -moz-transition-delay: initial;
+            -o-transition-delay: initial;
+            -ms-transition-delay: initial;
+            transition-delay: initial;           /* initial   ->  0 saniye (0 s). Yani gecikme olmadan geçiş başlar. */
+        }
+    </style>
+</head>
+<body>
+    <div>Selim Tekin</div>
+    <div id="islem"></div>
+</body>
+</html>

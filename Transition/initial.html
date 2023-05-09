@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition (initial)</title>
+    <style>
+        /* transition   -> HTML elementinin tüm geçiş özelliklerini belirler.
+           Parametreler -> transition-property | transition-duration | transition-timing-function | transition-delay
+           Varsayılan Değerler :    all        |           0s        |              ease          |        0s
+           Değerler     -> property value (özellik değeri) | initial
+           transition-property       : CSS özellik adı.
+           transition-duration       : Geçiş süresi.
+           transition-timing-function: Hız eğrisi.
+           transition-delay          : Duraksama süresi.
+           initial                   : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: yellow;
+            -webkit-transition: width 5s;
+            -moz-transition: width 5s;
+            -o-transition: width 5s;
+            -ms-transition: width 5s;
+            transition: width 5s;
+        }
+        div:hover{
+            width: 1000px;
+        }
+        #deneme{
+            -webkit-transition: initial;
+            -moz-transition: initial;
+            -o-transition: initial;
+            -ms-transition: initial;
+            transition: initial;
+        }
+    </style>
+</head>
+<body>
+    <div></div><br />
+    <div id="deneme"></div>
+</body>
+</html>

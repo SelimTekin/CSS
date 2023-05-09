@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition-property</title>
+    <style>
+        /* transition-property  ->  HTML elementine tanımlanmış olan geçiş özelliği için, kullanılması gereken CSS'de tanımlı olan özellik adını belirler.
+           Değerler             ->  all | property | initial
+           all                  -> Hepsi.
+           property             -> Özellik.
+           initial              -> HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border: 1px solid black;
+            -webkit-transition: 5s, 2s;
+            -moz-transition: 5s, 2s;
+            -o-transition: 5s, 2s;
+            -ms-transition: 5s, 2s;
+            transition: 5s, 2s;
+            -webkit-transition-property: width, height;
+            -moz-transition-property: width, height;
+            -o-transition-property: width, height;
+            -ms-transition-property: width, height;
+            transition-property: width, height;
+        }
+        div:hover{
+            /*-webkit-transform: rotate(1800deg);
+            -moz-transform: rotate(1800deg);
+            -o-transform: rotate(1800deg);
+            -ms-transform: rotate(1800deg);
+            transform: rotate(1800deg);*/
+            width: 1000px;
+            height: 600px;
+        }
+        #islem{
+            -webkit-transition-property: initial;
+            -moz-transition-property: initial;
+            -o-transition-property: initial;
+            -ms-transition-property: initial;
+            transition-property: initial;           /* initial   ->  all (Yani bütün CSS property'leri için geçerli olur ve yine çalışır.) */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="islem"></div>
+</body>
+</html>
