@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basic Example</title>
+    <style>
+        /* animation    :  HTML elementinin tüm animasyon özelliklerini berlirler.
+           Parametreler : animation-name | animation-duration | animation-timing-function | animation-delay | animation-iteration-count animation-direction | animation-fill-mode | animation-play-state
+
+           Varsaılan Değerler : none 0 ease 0 1 normal none running
+           Değerler           : animation-value | initial
+           animation-value    : Animasyon özelliği değeri / değerleri
+           initial            : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 200px;
+            background-color: red;
+            -webkit-animation: selim 1s linear 0s infinite alternate none running;
+            -moz-animation: selim 1s linear 0s infinite alternate none running;
+            -o-animation: selim 1s linear 0s infinite alternate none running;
+            -ms-animation: selim 1s linear 0s infinite alternate none running;
+            animation: selim 1s linear 0s infinite alternate none running;         /* normal yerine alternate dersek sona geldiğinde kesilmeden başa geçer ve tekrarlanır. */
+        }
+        @keyframes selim{
+            from{            /* nereden başlayacak */
+                -webkit-transform: rotate(0deg) scale(1.0);
+                -moz-transform: rotate(0deg) scale(1.0);
+                -o-transform: rotate(0deg) scale(1.0);
+                -ms-transform: rotate(0deg) scale(1.0);
+                transform: rotate(0deg) scale(1.0);
+                background-color: red;
+            }
+            to{              /* nerede bitecek */
+                -webkit-transform: rotate(180deg) scale(2.5);
+                -moz-transform: rotate(180deg) scale(2.5);
+                -o-transform: rotate(180deg) scale(2.5);
+                -ms-transform: rotate(180deg) scale(2.5);
+                transform: rotate(180deg) scale(2.5);
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

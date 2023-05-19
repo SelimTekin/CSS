@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-duration</title>
+    <style>
+        /* animation-duration : HTML elementine tanımlanmış olan animasyon döngüsünün, kaç saniye veya kaç milisaniye sonunda tamamlanacağını belirler.
+           Değerler           : time | initial
+           time               : Zaman (saniye : s, milisaniye : ms)
+           initial            : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: yellow;
+            border: 1px solid grey;
+            -webkit-border-radius: 5px 50%;
+            -moz-border-radius: 5px 50%;
+            -o-border-radius: 5px 50%;
+            -ms-border-radius: 5px 50%;
+            border-radius: 5px 50%;
+            -webkit-animation-name: selim;
+            -moz-animation-name: selim;
+            -o-animation-name: selim;
+            -ms-animation-name: selim;
+            animation-name: selim;
+            -webkit-animation-duration: 5000ms;
+            -moz-animation-duration: 5000ms;
+            -o-animation-duration: 5000ms;
+            -ms-animation-duration: 5000ms;
+            animation-duration: 5000ms;
+        }
+        @keyframes selim {
+            from{
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to{
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        #deneme{
+            -webkit-animation-duration: initial;
+            -moz-animation-duration: initial;
+            -o-animation-duration: initial;
+            -ms-animation-duration: initial;
+            animation-duration: initial;        /* time : 0s -> Dolayısıyla animation çalışmayacaktır. */
+        }
+    </style>
+</head>
+<body>
+    <div></div><br />
+    <div id="deneme"></div>
+</body>
+</html>

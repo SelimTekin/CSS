@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@keyframes (exampke)</title>
+    <style>
+      /* @keyframes  :  HTML elementine tanımlanmış olan animasyonun, animasyon arasındaki ara aşamalarını belirler.
+           Değerler    :  from | to | %
+           from        : Başlangıç.
+           to          : Bitiş.
+           %           : Yüzde değeri.
+        */
+
+      div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 200px;
+        background-color: #4515e5;
+        -webkit-animation: selim 5s ease 0s infinite normal none running;
+        -moz-animation: selim 5s ease 0s infinite normal none running;
+        -o-animation: selim 5s ease 0s infinite normal none running;
+        -ms-animation: selim 5s ease 0s infinite normal none running;
+        animation: selim 5s ease 0s infinite normal none running;
+      }
+      @keyframes selim {
+        25% { /* Zamanının (Animasyonun) 25% ' inde bu işlemi yap */
+          -webkit-transform: rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+        }
+        50% {
+          -webkit-transform: skewX(45deg);
+          -moz-transform: skewX(45deg);
+          -o-transform: skewX(45deg);
+          -ms-transform: skewX(45deg);
+          transform: skewX(45deg);
+          background-color: black;
+        }
+        75% {
+          -webkit-transform: scale(2);
+          -moz-transform: scale(2);
+          -o-transform: scale(2);
+          -ms-transform: scale(2);
+          transform: scale(2);
+        }
+        100% {
+          -webkit-transform: skewX(40deg);
+          -moz-transform: skewX(40deg);
+          -o-transform: skewX(40deg);
+          -ms-transform: skewX(40deg);
+          transform: skewX(40deg);
+          background-color: #4515e5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

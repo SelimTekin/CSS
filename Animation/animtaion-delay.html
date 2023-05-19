@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-duration</title>
+    <style>
+        /* animation-delay : HTML elementine tanımlanmış olan animasyonun, kaç saniye veya kaç milisaniye gecikme sonunda başlayaacağını belirler.
+           Değerler           : time | initial
+           time               : Zaman (saniye : s, milisaniye : ms)
+           initial            : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        p{
+            height: 50px;
+            border: 1px solid black;
+            line-height: 50px;
+            text-align: center;
+            -webkit-animation-name: selim;
+            -moz-animation-name: selim;
+            -o-animation-name: selim;
+            -ms-animation-name: selim;
+            animation-name: selim;
+            -webkit-animation-duration: 5000ms;
+            -moz-animation-duration: 5000ms;
+            -o-animation-duration: 5000ms;
+            -ms-animation-duration: 5000ms;
+            animation-duration: 5000ms;
+            -webkit-animation-delay: 2s;
+            -moz-animation-delay: 2s;
+            -o-animation-delay: 2s;
+            -ms-animation-delay: 2s;
+            animation-delay: 2s;
+        }
+        @keyframes selim {
+            0%{
+                width: 100%;
+                background-color: yellow;
+            }
+            50%{
+                width: 50%;
+                background-color: red;
+            }
+            75%{
+                width: 75%;
+                background-color: blue;
+            }
+            100%{
+                width: 25%;
+                background-color: transparent;
+            }
+        }
+
+        #deneme{
+            -webkit-animation-delay: initial;
+            -moz-animation-delay: initial;
+            -o-animation-delay: initial;
+            -ms-animation-delay: initial;
+            animation-delay: initial;        /* time : 0s -> Dolayısıyla animation gecikmeden başlayacaktır. */
+        }
+    </style>
+</head>
+<body>
+    <p>selim</p><br />
+    <p id="deneme"></p>
+</body>
+</html>

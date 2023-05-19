@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basic Example</title>
+    <style>
+        /* animation    :  HTML elementinin tüm animasyon özelliklerini berlirler.
+           Parametreler : animation-name | animation-duration | animation-timing-function | animation-delay | animation-iteration-count animation-direction | animation-fill-mode | animation-play-state
+
+           Varsaılan Değerler : none 0 ease 0 1 normal none running
+           Değerler           : animation-value | initial
+           animation-value    : Animasyon özelliği değeri / değerleri
+           initial            : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            -webkit-animation: selim 1s linear 0s infinite normal none running;
+            -moz-animation: selim 1s linear 0s infinite normal none running;
+            -o-animation: selim 1s linear 0s infinite normal none running;
+            -ms-animation: selim 1s linear 0s infinite normal none running;
+            animation: selim 1s linear 0s infinite normal none running;         /* normal yerine alternate dersek sona geldiğinde kesilmeden başa geçer ve tekrarlanır. */
+        }
+        @keyframes selim{
+            from{            /* nereden başlayacak */
+                left: 0px;
+            }
+            to{
+                left: 500px; /* nerede bitecek */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

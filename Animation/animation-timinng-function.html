@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation-timing-function</title>
+    <style>
+      /* animation-timing-function : HTML elementine tanımlanmış olan animasyon döngüsünün hız eğrisi özelliklerini belirler.
+           Değerler ->  ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | steps | cubic-bezier | initial
+           ease         : Yavaş olarak başlayarak hızlanır ve sona doğru yavaşlar.
+           linear       : Başlangıçtan sona kadar aynı hız.
+           ease-in      : Yavaş olarak başalayarak sona doğru hızlanır.
+           ease-out     : Hızlı olarak başalayarak sona doğru yavaşlar.
+           ease-in-out  : Yavaş olarak başlayarak ortada hızlanır ve sona doğru tekrar yavaşlar.
+           step-start   : Geçiş süresüne bakılmaksızın doğrudan sona ulaşır.
+           step-end     : Geçiş süresine bakılarak, geçiş süresi kadar bekleyerek doğrudan sona ulaşır.
+           steps        : Başlangıç ve bitiş arasında adımlamalı geçiş işlemi yapar.
+           cubic-bezier : Bezier eğrisi. (http://cubic-bezier.com)
+           initial      : HTML elementi varsayılan biçimlendirme değerine döner.
+            */
+
+      div#anaEleman{
+        width: 1500px;
+        height: 555px;
+        border: 1px solid black;
+      }
+      div.icElemanlar {
+        width: 0px;
+        height: 50px;
+        margin: 5px;
+        -webkit-animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        -ms-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        -o-animation-fill-mode: forwards;
+        -ms-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;        /* En sonda dursun. */
+      }
+
+      #bir {
+        background-color: #ff0004;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        -o-animation-timing-function: ease;
+        -ms-animation-timing-function: ease;
+        animation-timing-function: ease;
+      }
+      #iki {
+        background-color: #6f23d9;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: linear;
+        -moz-animation-timing-function: linear;
+        -o-animation-timing-function: linear;
+        -ms-animation-timing-function: linear;
+        animation-timing-function: linear;
+      }
+      #uc {
+        background-color: #45e17e;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: ease-in;
+        -moz-animation-timing-function: ease-in;
+        -o-animation-timing-function: ease-in;
+        -ms-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+      #dort {
+        background-color: #a7490a;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: ease-out;
+        -moz-animation-timing-function: ease-out;
+        -o-animation-timing-function: ease-out;
+        -ms-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+      #bes {
+        background-color: #e4f811;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: ease-in-out;
+        -moz-animation-timing-function: ease-in-out;
+        -o-animation-timing-function: ease-in-out;
+        -ms-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+      }
+      #alti {
+        background-color: #00ff0d;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: step-start;
+        -moz-animation-timing-function: step-start;
+        -o-animation-timing-function: step-start;
+        -ms-animation-timing-function: step-start;
+        animation-timing-function: step-start;
+      }
+      #yedi {
+        background-color: #686666;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: step-end;
+        -moz-animation-timing-function: step-end;
+        -o-animation-timing-function: step-end;
+        -ms-animation-timing-function: step-end;
+        animation-timing-function: step-end;
+      }
+      #sekiz {
+        background-color: #2ba8e4;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: steps(5, end);
+        -moz-animation-timing-function: steps(5, end);
+        -o-animation-timing-function: steps(5, end);
+        -ms-animation-timing-function: steps(5, end);
+        animation-timing-function: steps(5, end);
+      }
+      #dokuz {
+        background-color: #188c34;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: steps(5, start);
+        -moz-animation-timing-function: steps(5, start);
+        -o-animation-timing-function: steps(5, start);
+        -ms-animation-timing-function: steps(5, start);
+        animation-timing-function: steps(5, start);
+      }
+      #on {
+        background-color: #433b87;
+        -webkit-animation-name: selim;
+        -moz-animation-name: selim;
+        -o-animation-name: selim;
+        -ms-animation-name: selim;
+        animation-name: selim;
+        -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        -moz-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        -o-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        -ms-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+
+      @keyframes selim {
+        from{
+          width: 100px;
+        }
+        to{
+          width: 1490px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="anaEleman">
+        <div id="bir" class="icElemanlar">ease</div>
+        <div id="iki" class="icElemanlar">linear</div>
+        <div id="uc" class="icElemanlar">ease-in</div>
+        <div id="dort" class="icElemanlar">ease-out</div>
+        <div id="bes" class="icElemanlar">ease-in-out</div>
+        <div id="alti" class="icElemanlar">step-start</div>
+        <div id="yedi" class="icElemanlar">step-end</div>
+        <div id="sekiz" class="icElemanlar">steps(5, end)</div>
+        <div id="dokuz" class="icElemanlar">steps(5, start)</div>
+        <div id="on" class="icElemanlar">cubic-bezier</div>
+      </div>
+  </body>
+</html>

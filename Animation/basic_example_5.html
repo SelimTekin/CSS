@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basic Example</title>
+    <style>
+        /* animation    :  HTML elementinin tüm animasyon özelliklerini berlirler.
+           Parametreler : animation-name | animation-duration | animation-timing-function | animation-delay | animation-iteration-count animation-direction | animation-fill-mode | animation-play-state
+
+           Varsaılan Değerler : none 0 ease 0 1 normal none running
+           Değerler           : animation-value | initial
+           animation-value    : Animasyon özelliği değeri / değerleri
+           initial            : HTML elementi varsayılan biçimlendirme değerine döner.
+        */
+
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            -webkit-animation: selim 3s linear 0s infinite alternate none running;
+            -moz-animation: selim 3s linear 0s infinite alternate none running;
+            -o-animation: selim 3s linear 0s infinite alternate none running;
+            -ms-animation: selim 3s linear 0s infinite alternate none running;
+            animation: selim 3s linear 0s infinite alternate none running;
+        }
+        @keyframes selim{
+            from{            /* nereden başlayacak */
+                width: 100px;
+            }
+            to{              /* nerede bitecek */
+                width: 1500px;
+            }
+        }
+        #islem{
+            -webkit-animation: initial;
+            -moz-animation: initial;
+            -o-animation: initial;
+            -ms-animation: initial;
+            animation: initial;         /* animation-name: none olur ve böyle bir keyframe olmadığı için de animation çalışmaz. */
+        }
+    </style>
+</head>
+<body>
+    <div></div><br />
+    <div id="islem"></div><br />
+    <div></div>
+</body>
+</html>
